@@ -1,1 +1,2 @@
-# this is readme of  holbertonschool-low_level_programming
+# holbertonschool-low_level_programming
+Basics of c
