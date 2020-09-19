@@ -7,11 +7,16 @@
 
 int main(void)
 {
-	char alpha;
+	char low;
+	char up;
 
-	for (alpha = 'a' ; alpha <= 'z' ; alpha++)
+	for (low = 'a' ; low <= 'z' ; low++)
 	{
-		putchar(alpha);
+		putchar(low);
+	}
+	for (up = 'A' ; up <= 'Z' ; up++)
+	{
+		putchar(up);
 	}
 	putchar('\n');
 
