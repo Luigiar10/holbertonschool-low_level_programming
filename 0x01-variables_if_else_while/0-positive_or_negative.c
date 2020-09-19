@@ -2,13 +2,13 @@
 #include <time.h>
 #include <stdio.h>
 /* more headers goes there */
+
+/* betty style doc for function main goes there */
 /**
   * main - Entry point
   *
   * Return: always 0
   */
-
-/* betty style doc for function main goes there */
 int main(void)
 {
 	int n;
@@ -29,7 +29,6 @@ int main(void)
 	{
 		printf("%d is positive\n", n);
 	}
-
 
 	return (0);
 }
