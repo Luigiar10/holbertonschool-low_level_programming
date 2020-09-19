@@ -4,7 +4,7 @@
 /**
   * main - Entry point
   *
-  *Return: always 0
+  * Return: always 0
   */
 
 /* betty style doc for function main goes there */
@@ -16,11 +16,16 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	
-	if(n == 0){
+	if(n == 0)
+	{
 		printf("is zero");
-	}else if(n < 0){
+	}
+	else if(n < 0)
+	{
 		printf("is negative");
-	}else if(n > 0){
+	}
+	else if(n > 0)
+	{
 		printf("is positive");
 	}
 
