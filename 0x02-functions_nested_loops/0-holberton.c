@@ -1,9 +1,12 @@
 #include "holberton.h"
+
 /**
-  * main - Putchar entry point
+  * main - Entry point
   *
-  * Return: Always 0
- */
+  * Return: Always
+  *
+  */
+
 int main(void)
 {
 	_putchar('H');
@@ -16,6 +19,5 @@ int main(void)
 	_putchar('o');
 	_putchar('n');
 	_putchar('\n');
-
 	return (0);
 }
