@@ -2,7 +2,7 @@
 #include <ctype.h>
 /**
   * islower - Entry point
-  *
+  * @c:  checker
   * Return: 0 and 1
   */
 int _islower(int c)
