@@ -1,19 +1,18 @@
 #include "holberton.h"
 /**
-  * printf_alphabet - Entry point
-  *
-  */
-void print_alphabet(void)
+ * print_alphabet_x10 - this function prints ten times the alphabet
+ */
+void print_alphabet_x10(void)
 {
-	char ten, alphabet;
+	int alphabet
+	int ten;
 
-	for(ten = 0; ten <= 9; ten++)
+	for (ten = 0; ten <= 9; ten++)
 	{
-		for(alphabet = 'a'; alphabet <= 'z'; alphabet++)
+		for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 		{
 			_putchar(alphabet);
 		}
 		_putchar('\n');
 	}
 }
-
