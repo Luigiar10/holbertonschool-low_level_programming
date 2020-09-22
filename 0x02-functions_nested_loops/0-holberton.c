@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-  * main - Entry point
+  * main - Putchar entry point
   *
   * Return: Always 0
  */
