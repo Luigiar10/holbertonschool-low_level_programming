@@ -1,16 +1,12 @@
 #include "holberton.h"
 /**
-  * _isalpha - Entry point
-  * @c: checker
-  * Return: 1 and 0
+  * _islower - Entry point
+  * @c: check
+  * Return: 1 
   */
-int _isalpha(int c)
+int _islower(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-	{
-		return(1);
-	}else
-	{
-		return(0);
-	}
+	if  ((c >= 'a') && (c <= 'z'))
+		return (1);
+		return (0);
 }
