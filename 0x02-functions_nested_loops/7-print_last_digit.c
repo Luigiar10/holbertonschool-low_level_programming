@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
   * print_last_digit - Entry point
-  * @i: variable num
+  * @num: variable num
   * Return: Always 0
   *
   */
