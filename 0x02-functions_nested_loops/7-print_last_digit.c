@@ -6,10 +6,19 @@
   */
 int print_last_digit(int ram)
 {
-	int num;
+	int num = ram % 10;
 
-	num = ram % 10;
-	_putchar(num);
+	if(num >= 0)
+	{
+		_putchar('0' + ram);
+		return(num);
+	}
+	else
+	{
+		num = num * (-1);
+		_putchar('0' + num);
+		return(num);
+	}
 
 	return(0);
 
