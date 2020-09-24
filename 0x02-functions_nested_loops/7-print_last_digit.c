@@ -4,6 +4,7 @@
   * ram: provider ramdom num
   * Return: Always 0 
   */
+
 int print_last_digit(int ram)
 {
 	int num = ram % 10;
