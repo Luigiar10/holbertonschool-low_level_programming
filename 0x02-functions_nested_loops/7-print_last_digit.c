@@ -19,7 +19,4 @@ int print_last_digit(int ram)
 		_putchar('0' + num);
 		return(num);
 	}
-
-	return(0);
-
 }
