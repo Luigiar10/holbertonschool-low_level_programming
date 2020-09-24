@@ -10,7 +10,7 @@ int print_last_digit(int ram)
 
 	if(num >= 0)
 	{
-		_putchar('0' + ram);
+		_putchar('0' + num);
 		return(num);
 	}
 	else
