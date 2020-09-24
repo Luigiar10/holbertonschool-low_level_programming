@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
   * print_last_digit - Entry point
-  * ram: provider ramdom num
-  * Return: Always 0 
+  * @i: variable num
+  * Return: Always 0
+  *
   */
 
 int print_last_digit(int ram)
