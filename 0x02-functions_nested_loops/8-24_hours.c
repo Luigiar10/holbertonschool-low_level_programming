@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
   * jack_bauer - Entry point
-  * variables of data type int
+  * @hours: variable int
+  * @minutes: variable int
   * Return: Always 0 (Success)
   *
   */
