@@ -1,10 +1,9 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
   * _strlen - length
   * @s: value
-  *
+  * Return: len
   */
 
 
