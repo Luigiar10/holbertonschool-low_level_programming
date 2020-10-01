@@ -2,7 +2,8 @@
 /**
   * _isupper - check alphabet
   * @c: variable
-  * Return: 1 
+  * Return: 1
+  *
   */
 int _isupper(int c)
 {
