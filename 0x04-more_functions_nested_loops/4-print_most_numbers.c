@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
   * print_most_numbers - this function print numbers.
-  * 
+  * @num: variable of type int 
   * Return: new line
   */
 void print_most_numbers(void)
