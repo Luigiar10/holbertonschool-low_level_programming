@@ -1,13 +1,10 @@
 #include "holberton.h"
 /**
- * times_table - matrix for table 9.
+ * times_table - prototype of entry
  * 
- * @hor: variable horizontal
- * @ver: variable vertical
  */
 void times_table(void)
 {
-
 	int hor, ver;
 	
 	for (hor = 0; hor <= 9; hor++)
