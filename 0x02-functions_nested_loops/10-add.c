@@ -10,6 +10,5 @@ int add(int int1, int int2)
 	int result;
 
 	result = int1 + int2;
-	putchar
 	return (result);
 }
