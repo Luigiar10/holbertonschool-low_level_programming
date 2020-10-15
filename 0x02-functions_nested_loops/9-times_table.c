@@ -1,13 +1,12 @@
 #include "holberton.h"
 /**
  * times_table - prototype of entry
- * 
+ *
+ *
  */
 void times_table(void)
 {
-
 int hor, ver;
-
 for (hor = 0; hor <= 9; hor++)
 {
 for (ver = 0; ver <= 9; ver++)
