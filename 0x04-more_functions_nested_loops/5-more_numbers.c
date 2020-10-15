@@ -14,12 +14,12 @@ void more_numbers(void)
 		{
 			if (number > 19)
 			{
-				_putchar( (number / 20) + '0');
+				_putchar((number / 20) + '0');
 			}
 			else
 			{
 			}
-			_putchar( (number % 10) + '0');
+			_putchar((number % 10) + '0');
 		}
 		_putchar('\n');
 	}
