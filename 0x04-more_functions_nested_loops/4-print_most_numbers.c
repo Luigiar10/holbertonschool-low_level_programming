@@ -1,21 +1,19 @@
 #include "holberton.h"
 /**
-  * print_most_numbers - print numbers
+  * print_most_numbers - entry point.
   *
-  * @num: variable of type int
-  *
-  * Return: new line
+  * Return: Always 0
   *
   */
 void print_most_numbers(void)
 {
-	int num;
+	int a;
 
-	for (num = '0'; num <= '9'; num++)
+	for (a = '0'; a <= '9'; a++)
 	{
-		if ((num != '2') && (num != '4'))
+		if ((a != '2') && (a != '4'))
 		{
-			_putchar(num);
+			_putchar(a);
 		}
 	}
 	_putchar('\n');
