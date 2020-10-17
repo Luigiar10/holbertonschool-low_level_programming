@@ -1,26 +1,29 @@
 #include "holberton.h"
 /**
-  * print_square - Entry point.
+  * print_square - entry point
   *
-  * @size: number to count
+  * @n: provider number
   *
-  * Return: Always 0 (Success)
+  * Return: Always 0
   *
   */
-void print_square(int size)
+void print_square(int n)
 {
 	int ver, hor;
 
-	if (size <= 0)
+	if (n > 0)
 	{
-		_putchar(10);
-		for (hor = 0; hor < size; hor++)
+		for (ver = 1; ver <= n; ver++)
 		{
-			for (ver = 0; ver < size; ver++)
+			for (hor = 1; hor <= n; hor++)
 			{
 				_putchar('#');
 			}
-			_putchar(10);
+			_putchar('\n');
 		}
+	}
+	else
+	{
+		_putchar('\n');
 	}
 }
