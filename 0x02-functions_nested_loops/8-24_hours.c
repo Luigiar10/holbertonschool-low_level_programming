@@ -1,14 +1,15 @@
 #include "holberton.h"
 /**
   * jack_bauer - Entry point
-  * 
-  * Return: Always 0 (Success)
+  *
+  * Return: Always 0
+  *
   *
   */
+
 void jack_bauer(void)
 {
-	int hours;
-	int minutes;
+	int hours, minutes;
 
 	for (hours = 0; hours <= 23; hours++)
 	{
