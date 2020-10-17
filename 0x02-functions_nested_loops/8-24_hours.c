@@ -1,8 +1,7 @@
 #include "holberton.h"
 /**
   * jack_bauer - Entry point
-  * @hours: variable int
-  * @minutes: variable int
+  * 
   * Return: Always 0 (Success)
   *
   */
@@ -15,11 +14,11 @@ void jack_bauer(void)
 	{
 		for (minutes = 0; minutes <= 59; minutes++)
 		{
-			_putchar( (hours / 10) + '0');
-			_putchar( (hours % 10) + '0');
+			_putchar((hours / 10) + '0');
+			_putchar((hours % 10) + '0');
 			_putchar(':');
-			_putchar('0' + (minutes / 10) );
-			_putchar('0' + (minutes % 10) );
+			_putchar('0' + (minutes / 10));
+			_putchar('0' + (minutes % 10));
 			_putchar('\n');
 		}
 	}
