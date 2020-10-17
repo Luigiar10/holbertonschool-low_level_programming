@@ -5,6 +5,7 @@
   * @num: variable of type int
   *
   * Return: new line
+  *
   */
 void print_most_numbers(void)
 {
