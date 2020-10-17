@@ -2,9 +2,9 @@
 /**
   * print_most_numbers - print numbers
   *
-  * @num: variable of type int 
-  * Return: new line
+  * @num: variable of type int
   *
+  * Return: new line
   */
 void print_most_numbers(void)
 {
