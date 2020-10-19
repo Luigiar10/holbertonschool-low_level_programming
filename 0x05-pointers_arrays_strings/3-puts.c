@@ -1,8 +1,10 @@
 #include "holberton.h"
 /**
-  * _puts - this function prints a string
-  * 
+  * _puts - entry point
+  *
   * @str: input
+  *
+  *
   */
 void _puts(char *str)
 {
