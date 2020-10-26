@@ -1,10 +1,12 @@
 #include "holberton.h"
 /**
- * _strncpy - this function copy n chars to a string
- * @dest: input string.
- * @src: input string.
- * @n: input integer.
- * Return: the result string.
+ * _strncpy - entry point
+ *
+ * @dest: variable
+ * @src: variable
+ * @n: variable
+ *
+ * Return: dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
