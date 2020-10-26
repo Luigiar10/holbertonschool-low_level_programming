@@ -8,17 +8,17 @@
  */
 char *leet(char *s)
 {
-	int x, l;
+	int a, b;
 	char l[] = "aAeEoOtTlL";
 	char n[] = "4433007711";
 
-	for (l = 0; s[l]; l++)
+	for (b = 0; s[b]; b++)
 	{
-		for (x = 0; l[x]; x++)
+		for (a = 0; l[a]; a++)
 		{
-			if (s[l] == l[x])
+			if (s[b] == l[a])
 			{
-				s[l] = n[x];
+				s[b] = n[a];
 			}
 		}
 	}
