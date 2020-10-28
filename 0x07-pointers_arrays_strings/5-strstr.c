@@ -3,9 +3,10 @@
  * _strstr - entry point
  *
  * @haystack: variable string
- * @needle: variable 
+ * @needle: variable
  *
  * Return: null
+ *
  */
 char *_strstr(char *haystack, char *needle)
 {
