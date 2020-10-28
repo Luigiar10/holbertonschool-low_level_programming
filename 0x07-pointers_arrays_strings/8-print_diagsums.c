@@ -2,6 +2,7 @@
 #include <stdio.h>
 /**
  * print_diagsums - this function prints the diagonals
+ *
  * @a: it is the matriz.
  * @size: is the size of the matriz.
  *
