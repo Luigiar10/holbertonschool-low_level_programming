@@ -1,10 +1,10 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * print_diagsums - this function prints the diagonals
+ * print_diagsums - entry point 
  *
- * @a: it is the matriz.
- * @size: is the size of the matriz.
+ * @a: variable
+ * @size: variable
  *
  */
 void print_diagsums(int *a, int size)
