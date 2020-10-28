@@ -5,7 +5,8 @@
  * @s: variable
  * @accept: variable
  *
- * Return: Always 0 
+ * Return: Always 0
+ *
  */
 char *_strpbrk(char *s, char *accept)
 {
