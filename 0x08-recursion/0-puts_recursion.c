@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
-  * _puts_recursion - prints buffer in hexa
-  * @s: the address of memory to print
-  *
-  * Return: always return 0.
-  */
+ * _puts_recursion - entry point
+ *
+ * @s: string.
+ *
+ */
 void _puts_recursion(char *s)
 {
 	if (*s == '\0')
