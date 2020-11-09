@@ -1,8 +1,10 @@
 #include "holberton.h"
 /**
+  * _strlen_recursion - entry point or protorype.
   *
+  * @s: string
   *
-  *
+  * Return: Always 0
   */
 int _strlen_recursion(char *s)
 {
