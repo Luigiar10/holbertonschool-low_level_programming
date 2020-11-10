@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * free_dog - entry point.
- *
+ * free_dog - this function frees the dog struct.
  * @d: the struct.
  */
 void free_dog(dog_t *d)
@@ -14,8 +13,8 @@ void free_dog(dog_t *d)
 	}
 	else
 	{
-		free(d->name);
-		free(d->owner);
-		free(d);
+	free(d->name);
+	free(d->owner);
+	free(d);
 	}
 }
