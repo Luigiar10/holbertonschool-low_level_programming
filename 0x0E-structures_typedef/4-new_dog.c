@@ -8,7 +8,7 @@ int funnew(char *str);
  * @name: name.
  * @age: age.
  * @owner: owner
-
+ *
  * Return: dog.
  *
  * Description: new dog.
