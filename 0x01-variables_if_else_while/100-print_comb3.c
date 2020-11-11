@@ -3,10 +3,12 @@
  * main - entry point
  *
  * Return: Always 0
+ *
 */
 int main(void)
 {
 	int x, z;
+
 	for (x = '0' ; x < '9'; x++)
 	{
 		for (z = x + 1; z <= '9'; z++)
