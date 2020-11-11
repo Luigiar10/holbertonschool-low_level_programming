@@ -1,13 +1,16 @@
 #include "holberton.h"
 /**
- * print_times_table - this make a times table.
- * @n: variable input.
+ * print_times_table - entry point
+ *
+ * @n: variable
+ *
  */
 void print_times_table(int n)
 {
 if (n >= 0 && n <= 15)
 {
 int x, z, y;
+
 for (x = 0; x <= n; x++)
 {
 for (z = 0; z <= n; z++)
@@ -45,8 +48,5 @@ _putchar((y % 10) + '0');
 }
 _putchar('\n');
 }
-}
-else
-{
 }
 }
