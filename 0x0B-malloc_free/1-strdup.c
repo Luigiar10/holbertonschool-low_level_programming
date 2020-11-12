@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
-* strdup - entry point
+* _strdup - entry point
 *
 * @str: argument
 *
