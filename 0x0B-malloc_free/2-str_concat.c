@@ -6,6 +6,7 @@
 * @s1: argument
 * @s2: argument
 *
+* Return: max
 */
 char *str_concat(char *s1, char *s2)
 {
