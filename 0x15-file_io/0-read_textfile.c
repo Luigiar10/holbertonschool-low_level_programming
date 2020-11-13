@@ -12,7 +12,7 @@
  * @filename: file.
  * @letters: letters
  *
- * Return: characters readed.
+ * Return: characters readed
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -24,28 +24,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-
 	lui = open(filename, O_RDONLY);
-	
 	if (lui == -1)
 	{
 		return (0);
 	}
-	
 	arr = malloc(sizeof(char) * letters);
-	
 	if (arr == NULL)
 	{
 		return (0);
 	}
-	
 	l = read(lui, arr, letters);
-	
 	if (l == -1)
 	{
 		return (0);
 	}
-	
 	x = write(STDOUT_FILENO, arr, l);
 	close(lui);
 	lui = strlen(arr);
