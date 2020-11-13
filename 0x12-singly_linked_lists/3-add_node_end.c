@@ -23,11 +23,13 @@ int _strlen(const char *str)
  * @str: string
  *
  * Return: new node
+ *
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *temp;
 	list_t *newnode = (list_t *) malloc(sizeof(list_t));
+
 	if (newnode == NULL)
 	{
 		return (NULL);
