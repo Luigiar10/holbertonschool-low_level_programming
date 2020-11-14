@@ -1,52 +1,46 @@
 #include "holberton.h"
 /**
- * print_times_table - entry point
- *
- * @n: variable
- *
- */
+* print_times_table - entry point
+*
+* @n: number
+*/
 void print_times_table(int n)
 {
-if (n >= 0 && n <= 15)
-{
-int x, z, y;
+	int num, mult, prod;
 
-for (x = 0; x <= n; x++)
-{
-for (z = 0; z <= n; z++)
-{
-y = x * z;
-if (z == 0)
-{
-_putchar(y + '0');
-}
-else
-{
-_putchar(',');
-_putchar(' ');
-if (y / 100 == 0)
-{
-_putchar(' ');
-if (y / 10 == 0)
-{
-_putchar(' ');
-_putchar(y + '0');
-}
-else
-{
-_putchar((y / 10) + '0');
-_putchar((y % 10) + '0');
-}
-}
-else
-{
-_putchar((y / 100) + '0');
-_putchar(((y / 10)) % 10 + '0');
-_putchar((y % 10) + '0');
-}
-}
-}
-_putchar('\n');
-}
-}
+	if (n >= 0 && n <= 15)
+	{
+		for (num = 0; num <= n; num++)
+		{
+			_putchar('0');
+
+			for (mult = 1; mult <= n; mult++)
+			{
+				_putchar(',');
+				_putchar(' ');
+
+				prod = num * mult;
+
+				if (prod <= 99)
+				{
+					_putchar(' ');
+				}
+				if (prod <= 9)
+				{
+					_putchar(' ');
+				}
+				if (prod >= 100)
+				{
+					_putchar((prod / 100) + '0');
+					_putchar(((prod / 10)) % 10 + '0');
+				}
+				else if (prod <= 99 && prod >= 10)
+				{
+					_putchar((prod / 10) + '0');
+				}
+				_putchar((prod % 10) + '0');
+			}
+			_putchar('\n');
+		}
+	}
 }
