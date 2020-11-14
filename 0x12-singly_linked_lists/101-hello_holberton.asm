@@ -1,19 +1,24 @@
- SECTION .data
-msg:      db "Hello, Holberton", 0
-fmt:      db "%s", 10, 0
+/* Attempting to output loop counter with printf*/
 
-        SECTION .text
-        extern printf
-        global main
+.global main
+.func main
+
 main:
+    PUSH {LR}
+    LDR R0, =string
+    MOV R1, #0x5                      @ iterations counter
+    BAL _loop
 
-        mov esi, msg    ; 64-bit Direccion comienzo de la cadena
-        mov edi, fmt    ; Formato de la cadena
-        mov eax, 0      ; printf is varargs,  EAX cuenta
+_loop:
+    SUBS R1, #0x1                    @ decrement, set flags
+    BL printf                                 @ call to the function
+    BEQ _exit                              @ if R1 == 0, exit
+    BNE _loop                             @ else, re-loop
 
-                        ;el numero de argumentos no enteros pasados
-        call printf
+_exit:
+    POP {PC}
+    MOV PC, LR
 
-        mov ebx, 0      ; normal-exit code
-        mov eax, 1      ; process-termination service
-        int 0x80
+.data
+string:
+    .asciz "%d\n"
