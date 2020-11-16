@@ -1,50 +1,58 @@
 #include "holberton.h"
+void print_prev_digits(int n);
 /**
- * print_number - entry point
- *
- * @n: variable.
- *
- */
+* print_number - entry point
+*
+* @n: number to print
+*/
 void print_number(int n)
 {
-	if (n > 1000)
+	if (n < 0)
 	{
-		_putchar((n / 1000) + '0');
-		_putchar(((n / 100) % 10) + '0');
-		_putchar(((n / 10) % 10) + '0');
-		_putchar((n % 10) + '0');
+		_putchar('-');
+	}
+	if (n > 9 || n < -9)
+	{
+		print_prev_digits(n);
+	}
+	if (n < 0)
+	{
+		_putchar(((n % 10) * -1) + '0');
 	}
 	else
 	{
-		if (n > 100)
+		_putchar((n % 10) + '0');
+	}
+}
+
+/**
+* print_prev_digits - entry point
+*
+* @n: arguments
+*/
+void print_prev_digits(int n)
+{
+	if (((n / 10) < -9) || ((n / 10) > 9))
+	{
+		print_prev_digits(n / 10);
+		if (n < 0)
 		{
-			_putchar((n / 100) + '0');
-			_putchar(((n / 10) % 10) + '0');
-			_putchar((n % 10) + '0');
+			_putchar((((n / 10) % 10) * -1) + '0');
 		}
 		else
 		{
-			if (n > 10)
-			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-			}
-			else
-			{
-				if (n == 0)
-				{
-					_putchar ('0');
-				}
-				else
-				{
-					if (n < 0)
-					{
-						_putchar('-');
-						_putchar(((n * -1) / 10) + '0');
-						_putchar(((n * -1) % 10) + '0');
-					}
-				}
-			}
+			_putchar(((n / 10) % 10) + '0');
+		}
+	}
+	else
+	{
+		if (n < 0)
+		{
+			_putchar(((n / 10) * -1) + '0');
+		}
+		else
+		{
+			_putchar((n / 10) + '0');
 		}
 	}
 }
