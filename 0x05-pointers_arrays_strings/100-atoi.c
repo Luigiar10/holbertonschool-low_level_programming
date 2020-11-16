@@ -9,14 +9,16 @@
 int _atoi(char *s)
 {
 	int x;
-	int z = 0; 
+	int z = 0;
 	int n = 0;
 	int j = 1;
 
 	while ((*(s + z) < '0' || *(s + z) > '9') && (*(s + z) != '\0'))
 	{
 		if (*(s + z) == '-')
+		{
 			j *= -1;
+		}
 		z++;
 	}
 	x = z;
