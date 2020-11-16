@@ -20,8 +20,8 @@ void print_number(int n)
 	}
 	for (y = 1 ;  num / 10 > 0 ; y++)
 	{
-		num = num / 10;	
-	}	
+		num = num / 10;
+	}
 	k = 1;
 
 	for (x = y - 1 ; x > 0 ; x--)
