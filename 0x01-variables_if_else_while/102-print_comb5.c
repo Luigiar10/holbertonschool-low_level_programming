@@ -1,34 +1,42 @@
 #include <stdio.h>
 /**
- * main - entry point.
- *
- * Return: Always 0
- *
- */
+* main - Entry point
+*
+* Return: Always 0
+*/
 int main(void)
 {
-int x, z, y, a;
+	int x = 0;
+	int z = 0;
+	int max[2] = {0, 0};
+	int num[4] = {0, 0, 0, 0};
 
-	for (x = '0'; x <= '9'; x++)
+	for (z = 0; z < 100; z++)
 	{
-		for (z = '0'; z <= '8'; z++)
+		for (x = 0; x < 100; x++)
 		{
-			for (y = '0'; y <= '9'; y++)
+			if (x != z)
 			{
-				for (a = '0'; a <= '9'; a++)
+				max[0] = (z * 100) + x;
+				max[1] = (x * 100) + z;
+
+				num[0] = z / 10;
+				num[1] = z % 10;
+				num[2] = x / 10;
+				num[3] = x % 10;
+
+				if (max[0] < max[1])
 				{
-					if (x != '0' || z != '0' || y != '0' || a != '0')
+					putchar(num[0] + '0');
+					putchar(num[1] + '0');
+					putchar(32);
+					putchar(num[2] + '0');
+					putchar(num[3] + '0');
+
+					if ((x != 99) || (z != 98))
 					{
-						putchar(x);
-						putchar(z);
-						putchar(' ');
-						putchar(y);
-						putchar(a);
-						if (x != '9' || z != '8' || y != '9' || a != '9')
-						{
-							putchar(',');
-							putchar(' ');
-						}
+						putchar(44);
+						putchar(32);
 					}
 				}
 			}
