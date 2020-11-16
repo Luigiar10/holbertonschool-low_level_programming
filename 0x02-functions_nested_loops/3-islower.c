@@ -2,8 +2,7 @@
 /**
  * _islower - Entry point
  * @c: check
- * Return: Always 0 
- *
+ * Return: Always 0
  */
 int _islower(int c)
 {
