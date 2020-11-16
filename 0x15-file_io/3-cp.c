@@ -72,7 +72,7 @@ void error_close(int fd, char *max)
 
 /**
 * error_file_from - error file
-
+*
 * @file_from: arguments
 * @max: arguments
 */
@@ -85,7 +85,7 @@ void error_file_from(char *file_from, char *max)
 
 /**
 * error_file_to - error created
-
+*
 * @file_to: arguments
 * @max: arguments
 */
