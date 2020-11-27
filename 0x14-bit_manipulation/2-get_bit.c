@@ -14,14 +14,9 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	srch <<= index;
 	if (index > (sizeof(unsigned long int) * 8) - 1)
-	{
 		return (-1);
-	}	
 	if ((n & srch))
-	{
 		return (1);
-	}
-	else{
+	else
 		return (0);
-	}
 }
