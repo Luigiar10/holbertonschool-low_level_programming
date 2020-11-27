@@ -4,61 +4,64 @@ unsigned int _strlen(const char *);
 unsigned int power(unsigned int, unsigned int);
 
 /**
- * binary_to_uint - this function converts a binary to decimal
- * @b: the binary number.
- * Return: the decimal number.
+ * binary_to_uint - entry point
+ *
+ * @b: arguments
+ *
+ * Return: number
  */
-
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int a, c;
-	unsigned int sum = 0;
+	unsigned int x, z;
+	unsigned int max = 0;
 
 	if (b == NULL)
 		return (0);
-	a = _strlen(b);
-	for (c = 1; c <= a; c++)
+	x = _strlen(b);
+	for (z = 1; z <= x; z++)
 	{
-		if (b[c - 1] != '0' && b[c - 1] != '1')
+		if (b[z - 1] != '0' && b[z - 1] != '1')
 			return (0);
-		if (b[c - 1] == '1')
+		if (b[z - 1] == '1')
 		{
-			sum = sum + power(2, (a - c));
+			max = max + power(2, (x - z));
 		}
 	}
-	return (sum);
+	return (max);
 }
 
 /**
- * _strlen - this function calculates the lenght of a string.
- * @b: the string.
- * Return: the count.
+ * _strlen - entry point
+ *
+ * @b: arguments
+ *
+ * Return: x count
  */
-
 unsigned int _strlen(const char *b)
 {
-	int a;
+	int x;
 
-	for (a = 0; b[a]; a++)
+	for (x = 0; b[x]; x++)
 	{
 	}
-	return (a);
+	return (x);
 }
 
 /**
- * power - this funtion calculates the power of a number.
- * @a: the number.
- * @b: the power.
- * Return: the result.
+ * power - entry point
+ *
+ * @x: arguments
+ * @b: arguments
+ *
+ * Return: pd
  */
-
-unsigned int power(unsigned int a, unsigned int b)
+unsigned int power(unsigned int x, unsigned int b)
 {
-	int pow = 1;
+	int pd = 1;
 
 	for (; b > 0; b--)
 	{
-		pow = pow * a;
+		pd = pd * x;
 	}
-	return (pow);
+	return (pd);
 }
