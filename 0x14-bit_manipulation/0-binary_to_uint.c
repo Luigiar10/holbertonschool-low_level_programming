@@ -1,77 +1,64 @@
-#include <stdlib.h>
 #include "holberton.h"
-#include <stdio.h>
-#include <string.h>
-unsigned int _strlen(const char *b);
-unsigned int super_power(unsigned int z, unsigned int x);
+#include <stdlib.h>
+unsigned int _strlen(const char *);
+unsigned int power(unsigned int, unsigned int);
 
 /**
- * binary_to_uint - entry point
- *
- * @b: pointer
- *
- * Return: max
+ * binary_to_uint - this function converts a binary to decimal
+ * @b: the binary number.
+ * Return: the decimal number.
  */
+
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int x, z, max = 0;
+	unsigned int a, c;
+	unsigned int sum = 0;
 
 	if (b == NULL)
-	{
 		return (0);
-	}
-
-	z = _strlen(b);
-
-	for (x = 1; x <= z ; x++)
+	a = _strlen(b);
+	for (c = 1; c <= a; c++)
 	{
-		if (b[x - 1] != '0' && b[x - 1] != '1')
-		{
+		if (b[c - 1] != '0' && b[c - 1] != '1')
 			return (0);
-		}
-
-		if (b[x - 1] == '1')
+		if (b[c - 1] == '1')
 		{
-			max = max + super_power(2, (z - x));
+			sum = sum + power(2, (a - c));
 		}
 	}
-
-	return (max);
+	return (sum);
 }
 
-
 /**
- * _strlen - entry point
- *
- * @b: arguments
- *
- * Return: tamaño
+ * _strlen - this function calculates the lenght of a string.
+ * @b: the string.
+ * Return: the count.
  */
+
 unsigned int _strlen(const char *b)
 {
-	unsigned int x;
+	int a;
 
-	for (x = 0; b[x]; x++)
+	for (a = 0; b[a]; a++)
 	{
 	}
-	return (x);
+	return (a);
 }
 
 /**
- * super_power - entry point
- *
- * @z: arguments
- *	@x: arguments
- *
- * Return: tamaño
+ * power - this funtion calculates the power of a number.
+ * @a: the number.
+ * @b: the power.
+ * Return: the result.
  */
-unsigned int super_power(unsigned int z, unsigned int x)
-{
-	unsigned int x = 1;
 
-	for (; x > 0; x--)
+unsigned int power(unsigned int a, unsigned int b)
+{
+	int pow = 1;
+
+	for (; b > 0; b--)
 	{
-		x = x * z;
+		pow = pow * a;
 	}
-	return (x);
+	return (pow);
 }
