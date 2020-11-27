@@ -1,45 +1,55 @@
-#include "holberton.h"
 #include <stdlib.h>
-unsigned int _strlen(const char *);
-unsigned int power(unsigned int, unsigned int);
+#include "holberton.h"
+#include <stdio.h>
+#include <string.h>
+unsigned int _strlen(const char *b);
+unsigned int super_power(unsigned int z, unsigned int x);
 
 /**
  * binary_to_uint - entry point
  *
- * @b: arguments
+ * @b: pointer
  *
  * Return: max
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int x, z;
-	unsigned int max = 0;
+	unsigned int x, z, max = 0;
 
 	if (b == NULL)
 	{
 		return (0);
 	}
-	x = _strlen(b);
-	for (z = 1; z <= x; z++)
+
+	z = _strlen(b);
+
+	for (x = 1; x <= z ; x++)
 	{
-		if (b[z - 1] != '0' && b[z - 1] != '1')
+		if (b[x - 1] != '0' && b[x - 1] != '1')
+		{
 			return (0);
-		if (b[z - 1] == '1')
-			max = max + power(2, (x - z));
+		}
+
+		if (b[x - 1] == '1')
+		{
+			max = max + super_power(2, (z - x));
+		}
 	}
+
 	return (max);
 }
+
 
 /**
  * _strlen - entry point
  *
  * @b: arguments
  *
- * Return: x
+ * Return: tamaño
  */
 unsigned int _strlen(const char *b)
 {
-	int x;
+	unsigned int x;
 
 	for (x = 0; b[x]; x++)
 	{
@@ -48,20 +58,20 @@ unsigned int _strlen(const char *b)
 }
 
 /**
- * power - entry point
+ * super_power - entry point
  *
- * @x: arguments
- * @b: arguments
+ * @z: arguments
+ *	@x: arguments
  *
- * Return: pow
+ * Return: tamaño
  */
-unsigned int power(unsigned int x, unsigned int b)
+unsigned int super_power(unsigned int z, unsigned int x)
 {
-	int poder = 1;
+	unsigned int x = 1;
 
-	for (; b > 0; b--)
+	for (; x > 0; x--)
 	{
-		poder = poder * x;
+		x = x * z;
 	}
-	return (poder);
+	return (x);
 }
