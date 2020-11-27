@@ -23,13 +23,9 @@ unsigned int binary_to_uint(const char *b)
 	for (z = 1; z <= x; z++)
 	{
 		if (b[z - 1] != '0' && b[z - 1] != '1')
-		{
 			return (0);
-		}
 		if (b[z - 1] == '1')
-		{
 			max = max + power(2, (x - z));
-		}
 	}
 	return (max);
 }
@@ -59,7 +55,6 @@ unsigned int _strlen(const char *b)
  *
  * Return: pow
  */
-
 unsigned int power(unsigned int x, unsigned int b)
 {
 	int poder = 1;
