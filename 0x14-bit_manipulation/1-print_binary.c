@@ -3,7 +3,7 @@
 
 /**
  * print_binary - entry point
- * 
+ *
  * @n: number.
  */
 void print_binary(unsigned long int n)
