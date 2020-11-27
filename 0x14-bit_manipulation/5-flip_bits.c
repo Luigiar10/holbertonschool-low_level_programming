@@ -2,27 +2,28 @@
 #include <stdio.h>
 
 /**
- * flip_bits - this function counts the bit that need to flip.
- * @n: first number.
- * @m: second number.
- * Return: the number of bits to change.
+ * flip_bits - entry point
+ *
+ * @n: arguments
+ * @m: arguments
+ *
+ * Return: number
  */
-
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int a = 0;
-	unsigned long int b, d;
-	int c;
+	unsigned int x = 0;
+	unsigned long int z, l;
+	int j;
 
-	b = n ^ m;
-	for (c = ((sizeof(unsigned long int) * 8) - 1); c >= 0; c--)
+	z = n ^ m;
+	for (j = ((sizeof(unsigned long int) * 8) - 1); j >= 0; j--)
 	{
-		d = b >> c;
-		if (d)
+		l = z >> j;
+		if (l)
 		{
-			if (d & 1)
-				a = a + 1;
+			if (l & 1)
+				x = x + 1;
 		}
 	}
-	return (a);
+	return (x);
 }
