@@ -1,24 +1,21 @@
-/* Attempting to output loop counter with printf*/
+	extern printf
+	global main
 
-.global main
-.func main
+	section .text
+main
+	push rbp
 
-main:
-    PUSH {LR}
-    LDR R0, =string
-    MOV R1, #0x5                      @ iterations counter
-    BAL _loop
+	mov rdi, fmt 		;arg3, length of string
+	mov rsi, msg 		;arg2, pointer to string
+	mov rax, 0 		;arg1, write to screen
+	call printf
 
-_loop:
-    SUBS R1, #0x1                    @ decrement, set flags
-    BL printf                                 @ call to the function
-    BEQ _exit                              @ if R1 == 0, exit
-    BNE _loop                             @ else, re-loop
+	pop rbp
 
-_exit:
-    POP {PC}
-    MOV PC, LR
+	mov rax,0
+	ret
+msg:
+	db "Hello, Holberton", 0
+fmt:
+	db "%s", 10, 0
 
-.data
-string:
-    .asciz "%d\n"
