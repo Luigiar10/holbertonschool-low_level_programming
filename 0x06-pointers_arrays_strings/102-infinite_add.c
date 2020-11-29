@@ -1,42 +1,40 @@
 /**
-* infinite_add - Prototype
+* infinite_add - Adds two numbers
+* @n1: Pointer to the first character of number 1
+* @n2: Pointer to the first character of number 2
+* @r: Buffer where to write the result
+* @n: Buffer size
 *
-* @n1: number 1
-* @n2: number 2
-*
-* @r: result
-* @n: size
-*
-* Return: result
+* Return: Pointer to the result of the string
 */
 char *infinite_add(char *n1, char *n2, char *r, int n)
 {
-	int tam1 = 0, tam2 = 0;
-	int ad = 0;
-	int x = n - 2;
+	int len1 = 0, len2 = 0;
+	int add = 0;
+	int i = n - 2;
 
-	while (n1[tam1 + 1] != 0)
-		tam1++;
-	while (n2[tam2 + 1] != 0)
-		tam2++;
+	while (n1[len1 + 1] != 0)
+		len1++;
+	while (n2[len2 + 1] != 0)
+		len2++;
 	r[n - 1] = 0;
 
-	while (x >= 0 && (tam1 >= 0 || tam2 >= 0))
+	while (i >= 0 && (len1 >= 0 || len2 >= 0))
 	{
-		ad += (tam1 < 0 ? '0' : n1[tam1]) + (tam2 < 0 ? '0' : n2[tam2]);
-		ad -= 2 * '0';
-		r[x] = ad % 10 + '0';
-		ad /= 10;
-		x--;
-		tam1--;
-		tam2--;
+		add += (len1 < 0 ? '0' : n1[len1]) + (len2 < 0 ? '0' : n2[len2]);
+		add -= 2 * '0';
+		r[i] = add % 10 + '0';
+		add /= 10;
+		i--;
+		len1--;
+		len2--;
 	}
 
-	if ((x < tam1 || x < tam2) || (x < 0 && ad))
+	if ((i < len1 || i < len2) || (i < 0 && add))
 	return (0);
 
-	ad ? r[x] = ad + '0' : 1;
-	x += ad ? 0 : 1;
+	add ? r[i] = add + '0' : 1;
+	i += add ? 0 : 1;
 
-	return (r + x);
+	return (r + i);
 }
