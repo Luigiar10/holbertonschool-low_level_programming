@@ -1,11 +1,11 @@
 #include "holberton.h"
 #include <stdlib.h>
-
 /**
-* malloc_checked - Function that allocates memory using malloc.
-* @b: size to allocate memory.
+* malloc_checked - entry point
 *
-* Return: a pointer with the memory location.
+* @b: arguments
+*
+* Return: pointer
 */
 void *malloc_checked(unsigned int b)
 {
