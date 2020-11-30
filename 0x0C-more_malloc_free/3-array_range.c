@@ -1,18 +1,18 @@
 #include "holberton.h"
 #include <stdlib.h>
-
 /**
-* array_range - Function that allocates memory for an array of integers.
-* @min: min elements of the array.
-* @max: max element of the array.
+* array_range - entry point
 *
-* Return: a pointer with the memory location of the array.
+* @min: arguments
+* @max: arguments
+*
+* Return: pointer
 */
 int *array_range(int min, int max)
 {
 	int *ptr = NULL;
-	int i;
-	unsigned int j = 0;
+	int x;
+	unsigned int z = 0;
 
 	if (min > max)
 		return (NULL);
@@ -21,10 +21,10 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	for (i = min ; i <= max; i++)
+	for (x = min ; x <= max; x++)
 	{
-		ptr[j] = i;
-		j++;
+		ptr[z] = x;
+		z++;
 	}
 	return (ptr);
 }
