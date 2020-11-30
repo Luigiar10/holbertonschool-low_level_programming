@@ -1,28 +1,17 @@
 #include <stdlib.h>
-
 char *_memcpy(char *dest, char *src, unsigned int n);
-
 /**
-* _realloc - allocates memory block using malloc and free
-* @ptr: pointer to the memory previosly allocated with malloc
-* @old_size: The size of the allocated space of ptr
-* @new_size: The new size to allocate
+* _realloc - entry point
 *
-* Description: allocates a new memory block for the pointer,
-* using the contents from the original pointer, copiyng up to the
-* minimum of the old and new sizes.
-* If new_size > old_size, the added memory should not be intialized
-* If new_size == old_size, returns the same pointer
-* If ptr == NULL, call is equivalent to malloc(new_size)
-* If new_size == 0 and ptr != NULL, call is equivalent to free(ptr),
-*  and return NULL.
+* @ptr: arguments
+* @old_size: arguments
+* @new_size: arguments
 *
-* Return: A pointer to the new allocated memory and free ptr.
-* NULL if can not allocate memory
+* Return: pointer
 */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *p;
+	char *ptr;
 
 	if (new_size == old_size)
 		return (ptr);
@@ -33,36 +22,36 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 
-	p = malloc(new_size);
+	ptr = malloc(new_size);
 
-	if (p == NULL)
+	if (ptr == NULL)
 		return (NULL);
 
 	if (ptr == NULL)
-		return (p);
+		return (ptr);
 
-	p = _memcpy(p, ptr, (new_size > old_size ? old_size : new_size));
+	ptr = _memcpy(ptr, ptr, (new_size > old_size ? old_size : new_size));
 	free(ptr);
-	return (p);
+	return (ptr);
 }
 
 /**
-* _memcpy - copies the memory are from
-* src to dest
-* @dest: The destination pointer
-* @src: The source pointer
-* @n: bytes to use from src
+* _memcpy - entry point
 *
-* Return: The pointer to dest
+* @dest: arguments
+* @src: arguments
+* @n: arguments
+*
+* Return: dest
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i = 0;
+	unsigned int x = 0;
 
-	while (i < n)
+	while (x < n)
 	{
-		*(dest + i) = *(src + i);
-		i++;
+		*(dest + x) = *(src + x);
+		x++;
 	}
 
 	return (dest);
