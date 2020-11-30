@@ -1,12 +1,11 @@
 #include "lists.h"
 #include <stdlib.h>
-
 /**
-* find_listint_loop_fl - finds a loop in a linked list
+* find_listint_loop_fl - entry point
 *
-* @head: linked list to search
+* @head: arguments
 *
-* Return: address of node where loop starts/returns, NULL if no loop
+* Return: NULL
 */
 listint_t *find_listint_loop_fl(listint_t *head)
 {
@@ -27,11 +26,11 @@ listint_t *find_listint_loop_fl(listint_t *head)
 }
 
 /**
-* free_listint_safe - frees a listint list, even if it has a loop
+* free_listint_safe - entry point
 *
-* @h: head of list
+* @h: arguments
 *
-* Return: number of nodes freed
+* Return: len
 */
 size_t free_listint_safe(listint_t **h)
 {
