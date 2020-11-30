@@ -1,17 +1,17 @@
 #include "holberton.h"
 #include <stdlib.h>
-
 /**
-* _calloc - Function that allocates memory for an array.
-* @nmemb: elements of the array.
-* @size: Bytes of each element fo the array.
+* _calloc - entry point
 *
-* Return: a pointer with the memory location of the array.
+* @nmemb: arguments
+* @size: arguments
+*
+* Return: pointer
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *ptr = NULL;
-	unsigned int i;
+	unsigned int x;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -20,9 +20,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	for (i = 0 ; i < nmemb * size; i++)
+	for (x = 0 ; x < nmemb * size; x++)
 	{
-		ptr[i] = 0;
+		ptr[x] = 0;
 	}
 	return ((void *)ptr);
 }
