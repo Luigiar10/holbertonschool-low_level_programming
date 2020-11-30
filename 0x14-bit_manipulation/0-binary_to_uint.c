@@ -2,7 +2,6 @@
 #include <stdlib.h>
 unsigned int _strlen(const char *);
 unsigned int power(unsigned int, unsigned int);
-
 /**
  * binary_to_uint - entry point
  *
