@@ -1,17 +1,20 @@
 #include "lists.h"
+
 /**
- * print_dlistint - this function prints a list.
- * @h: the list.
- * Return: number of elements in the list.
+ * print_dlistint - funciton that print.
+ * @h: input variable.
+ *
+ * Return: return value with index.
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	int x;
+	size_t i = 0;
 
-	for (x = 0; h != NULL; x++)
+	while (h)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
+		i++;
 	}
-	return (x);
+	return (i);
 }
