@@ -1,10 +1,11 @@
 #include "lists.h"
 /**
  * dlistint_len - entry point
+ *
  * @h: list
+ *
  * Return: elements
  */
-
 size_t dlistint_len(const dlistint_t *h)
 {
 	int x = 0;
