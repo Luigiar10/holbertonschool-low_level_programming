@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * print_dlistint - funciton that print.
+ * print_dlistint - entry point
+ *
  * @h: input variable.
  *
  * Return: return value with index.
